@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech with Dynamic Pause</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Text to Speech Converter</h1>
+        <textarea id="text" rows="10" cols="50" placeholder="Enter your text here"></textarea><br><br>
+        
+    <div class="slider-container">
+            <label for="voiceSelect">Select Language:</label>
+            <select id="voiceSelect"></select>
+    </div>
+    
+        <button id="startRestartBtn" onclick="startOrRestart()">Start</button>
+        <button id="stopResumeBtn" onclick="stopOrResume()">Stop</button>
+        <button onclick="rereadLastTwoWords()">Reread Last 2 Words</button>
+        
+
+        <div class="slider-container">
+            <label for="speedSlider">Speaking Speed (words per minute): <span id="speedValue">150</span></label>
+            <input type="range" id="speedSlider" min="50" max="300" value="120" onchange="updateSpeed()">
+
+            <label for="pauseSlider">Pause Duration per Letter (ms): <span id="pauseValue">250</span></label>
+            <input type="range" id="pauseSlider" min="50" max="500" value="150" onchange="updatePause()">
+
+            <label for="pitchSlider">Pitch: <span id="pitchValue">1</span></label>
+            <input type="range" id="pitchSlider" min="0" max="2" step="0.1" value="1" onchange="updatePitch()">
+        </div>
+        
+            <button id="BackToSimple" onclick="window.location.href ='/simple/index.html'">Go To Simple</button>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
