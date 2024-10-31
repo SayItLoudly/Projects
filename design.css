@@ -1,0 +1,150 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with a warm gradient background */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Container styling for a centered card layout with extra ad space */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    min-height: 750px; /* Increased height to add space for the ad */
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Heading styling with a bold blue color */
+h1 {
+    font-size: 1.8em;
+    color: #374785; /* Deep blue for title */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Textarea styling with a light border and focus effect */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #b3cde0;
+    border-radius: 8px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    box-shadow: 0 0 12px rgba(55, 71, 133, 0.5);
+}
+
+textarea:focus {
+    border-color: #374785; /* Matches heading color */
+    box-shadow: 0 0 8px rgba(55, 71, 133, 0.3);
+}
+
+/* Button styling with vibrant colors */
+button {
+    margin-top: 10px;
+    padding: 12px 24px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #ff6b6b; /* Coral color for main buttons */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e63946; /* Darker coral on hover */
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button + button {
+    margin-left: 10px; /* Adds spacing between buttons */
+}
+
+/* Slider container styling */
+.slider-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Slider label styling with a unique color */
+.slider-container label {
+    font-weight: bold;
+    color: #0081a7; /* Teal for label text */
+    margin-bottom: 5px;
+}
+
+/* Slider styling */
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+    -webkit-appearance: none;
+    background-color: #374785;
+    height: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: #ff6b6b; /* Matches button color */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Style for the displayed slider values */
+#speedValue, #pauseValue, #pitchValue {
+    color: #374785;
+    font-weight: bold;
+}
+
+/* Ad space styling at the bottom of the container */
+.ad-space {
+    width: 100%;
+    height: 100px; /* Adjust as needed */
+    background-color: #f9f9f9;
+    border-top: 1px solid #b3cde0;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+}
